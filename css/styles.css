@@ -1,3 +1,4 @@
+/* #region Main */
 :root {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 16px;
@@ -16,6 +17,11 @@ p {
     margin: 0;
     padding: 0;
     text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100px;
 }
 
 a {
@@ -39,66 +45,93 @@ body {
     margin: 0;
 }
 
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
 main {
     flex-grow: 1;
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 375px;
+    padding: 0 24px;
     margin: 0 auto;
-    padding: 0 64px;
 }
 
+/* #endregion Main */
 
+/* #region Header */
 .header {
-    border: 1px solid rgba(195, 212, 233, 0.4);
-    min-height: 124px;
+    padding: 0 0 148px 0;
     background-color: #fff;
 }
 
 .header .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+
 }
 
 .nav {
-    align-items: center;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .logo {
     text-transform: uppercase;
     text-decoration: none;
-    margin-right: 54px;
     font-weight: 700;
     letter-spacing: -0.03em;
     color: #3563E9;
-    font-size: 32px;
+    font-size: 24px;
 
-    padding: 40px 0;
+    padding: 32px 0;
+}
+
+.profile-img {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
 }
 
 .nav-search {
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 
+    position: relative;
 }
 
 .nav-search-input {
-    min-width: 492px;
-    height: 44px;
-    border-radius: 70px;
+    border-radius: 10px;
     border: 1px solid rgba(195, 212, 233, 0.4);
-    padding-left: 64px;
+    padding: 12px 0 12px 56px;
 
+    min-height: 48px;
+}
 
+.nav-search-input::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #596780;
+}
+
+.nav-search-input {
+    flex-grow: 1;
 }
 
 .search-icon {
     position: absolute;
-    left: 20px;
-    top: 10px;
+    left: 24px;
+    top: 12px;
 
     stroke: #596780;
     fill: none;
@@ -106,70 +139,68 @@ main {
     cursor: pointer;
 }
 
-.filter-icon {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+.filter-button {
+    width: 48px;
+    height: 48px;
 
+    border: 1px solid rgba(195, 212, 233, 0.4);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.filter-icon {
     stroke-width: 0;
     stroke: #596780;
     fill: none;
 
-    cursor: pointer;
-}
-
-.nav-search-input::placeholder {
-    font-size: 14px;
-    color: #596780;
-    font-weight: 500;
-    letter-spacing: -0.02em;
 }
 
 
-.header-menu-list {
-    display: flex;
-    gap: 20px;
+/* #endregion Header */
+
+/* #region Hero */
+
+.hero {
+    margin-top: -116px;
 }
 
-.menu-icon {
-    border-radius: 50%;
-    border: 1px solid rgba(195, 212, 233, 0.4);
-    width: 44px;
-    height: 44px;
+.hero-wrapper {
+    padding: 16px 0 0 16px;
+    min-height: 232px;
+    background-color: #54A6FF;
+    border-radius: 10px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.notifications {
-    position: relative;
-}
-
-.notifications:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: -0.7px;
-    right: 4px;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background-color: red;
-}
-
-.menu-icon {
-    fill: #596780;
-}
-
-.profile {
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-image: url(../img/profile.jpg);
+    background-image: url(../img/hero-bg.png);
     background-repeat: no-repeat;
+}
+
+.hero-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #fff;
+
+    margin-bottom: 12px;
+}
+
+.hero-text {
+    max-width: 216px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #fff;
+
+    margin-bottom: 16px;
+}
+
+.hero-button {
+    border-radius: 4px;
+    padding: 0px 20px;
+    width: 128px;
+    height: 44px;
+
+    color: #fff;
+    background-color: #3563E9;
 }
