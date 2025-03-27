@@ -154,6 +154,8 @@ main {
 }
 
 .filter-icon {
+    width: 24px;
+    height: 24px;
     stroke-width: 0;
     stroke: #596780;
     fill: none;
