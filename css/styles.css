@@ -147,9 +147,7 @@ main {
     border-radius: 10px;
     background-color: #fff;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 
 }
 
@@ -159,6 +157,9 @@ main {
     stroke-width: 0;
     stroke: #596780;
     fill: none;
+
+    display: block;
+    margin: 0 auto;
 
 }
 
